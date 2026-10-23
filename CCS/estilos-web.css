@@ -1,0 +1,206 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /* Evita desborde de las columnas de la web */
+}
+
+body {
+    font-family: sans-serif;
+    /* Mantenemos tu imagen del logo gigante original fija de fondo */
+    background-image: url(../IMG/fondo\ adidas.jpeg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #ffffff;
+}
+
+h3 {
+    display: none; /* Mantiene oculto tu texto auxiliar del menú */
+}
+
+/* ==========================================
+   2. BARRA DE NAVEGACIÓN (NAV NEGRO SUPERIOR)
+   ========================================== */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #000000;
+}
+
+nav ul {
+    background: #000000;
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 8px 20px;
+    background: none !important; /* Evita que el menú herede fondos blancos */
+    margin: 0 !important;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255) !important; /* Fuerza las letras del menú a color blanco */
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Tu efecto Hover original al pasar el mouse por el menú */
+nav ul li:hover a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: yellow !important;
+}
+
+/* ==========================================
+   3. SECCIONES Y CONTENIDOS GENERALES
+   ========================================== */
+section {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    background: none;
+}
+
+/* Forzamos que las imágenes ocupen su espacio correcto sin deformarse */
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 25px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   4. TU TARJETA INTERACTIVA DE NIÑOS (LÍNEAS 66-77 DE TU CAPTURA)
+   ========================================== */
+/* Usamos :not(nav ul) para proteger tu menú de la barra negra */
+section ul:not(nav ul) {
+    text-align: center;
+    font-family: sans-serif;
+    background: rgba(255, 255, 255, 0.95); /* Tu fondo blanco de tarjeta */
+    display: inline-block;
+    color: black;
+    padding: 20px 40px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    -webkit-animation: 5s;
+    -moz-transition: background .6s;
+    margin: 30px auto;
+}
+
+section ul:not(nav ul) li {
+    background: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
+}
+
+section ul:not(nav ul) li img {
+    max-width: 90px;
+    border-radius: 50%; /* Fuerza las fotos de los niños a círculos perfectos */
+    display: block;
+    margin-bottom: 8px;
+}
+
+section ul:not(nav ul) li h4 {
+    font-size: 15px;
+    color: #000000;
+    font-weight: bold;
+}
+
+/* Tu efecto Hover original en las tarjetas de niños (Línea 92) */
+section ul:not(nav ul) li:hover {
+    background: rgb(0, 0, 0);
+    color: white !important;
+    border-radius: 35px;
+    -moz-border-radius: 35px;
+    -webkit-border-radius: 35px;
+    padding: 8px 12px;
+}
+
+section ul:not(nav ul) li:hover h4 {
+    color: #ffffff;
+}
+
+/* ==========================================
+   5. PROTECCIÓN DEL MOSAICO DE CAMPAÑAS (UNA TENDENCIA / JENNIE)
+   ========================================== */
+/* Forzamos a la tabla de campañas a tener fondo blanco para aislarla del logo gigante gris */
+table {
+    max-width: 100%;
+    width: 100%;
+    background-color: #ffffff !important;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table tr td {
+    padding: 20px;
+    background-color: #ffffff !important; /* Bloquea las transparencias del body */
+    color: #000000 !important;
+}
+
+table tr td p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    color: #111111 !important;
+    margin-bottom: 12px;
+}
+
+table tr td h6 {
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    color: #555555 !important;
+    text-align: left;
+    font-weight: normal;
+    margin-top: 12px;
+}
+
+/* ==========================================
+   6. PIE DE PÁGINA (FOOTER EN GRIS INTENSO)
+   ========================================== */
+.footer {
+    background-color: #dcdcdc !important; /* Gris intermedio ceniza exacto */
+    padding: 50px 20px;
+    width: 100%;
+    clear: both; /* Evita interferencias de elementos de arriba */
+}
+
+/* Asegura el comportamiento de lista limpia en el footer sin heredar la caja blanca */
+.footer ul {
+    background: none !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+.footer ul li {
+    background: none !important;
+    display: block !important;
+    margin: 8px 0 !important;
+    text-align: left !important;
+}
+
+.footer ul li a {
+    color: #000000 !important;
+    text-decoration: none;
+    font-size: 14px;
+}
